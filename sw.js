@@ -1,5 +1,5 @@
 // Cert Strike offline cache. Bump VERSION whenever you upload a new index.html.
-const VERSION = 'cert-strike-v1';
+const VERSION = 'cert-strike-v2';
 const APP = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './icon-maskable-512.png', './apple-touch-icon.png', './favicon.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(APP)).then(() => self.skipWaiting()));
